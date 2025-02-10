@@ -11,6 +11,22 @@ const products = [
   { id: 3, name: "White Tee", price: 90, category: "Tees", image: "/images/clothes/white3.jpg", description: "This is a white tee", discount: 80 },
   { id: 4, name: "White Tee", price: 150, category: "Tees", image: "/images/clothes/white4.jpg", description: "This is a white tee", discount: 130 },
   { id: 5, name: "Hoodie", price: 350, category: "Hoodies", image: "/images/clothes/hoodie1.jpg", description: "This is a hoodie", discount: 300 },
+  { id: 6, name: "Hoodie", price: 350, category: "Hoodies", image: "/images/clothes/hoodie2.jpg", description: "This is a hoodie", discount: 300 },
+  { id: 7, name: "Hoodie", price: 350, category: "Hoodies", image: "/images/clothes/hoodie3.jpg", description: "This is a hoodie", discount: 300 },
+  { id: 8, name: "Short", price: 350, category: "Shorts", image: "/images/clothes/short1.jpg", description: "This is a short", discount: 300 },
+  { id: 9, name: "Short", price: 350, category: "Shorts", image: "/images/clothes/short2.jpg", description: "This is a short", discount: 300 },
+  { id: 10, name: "Short", price: 350, category: "Shorts", image: "/images/clothes/short3.jpg", description: "This is a short", discount: 300 },
+  { id: 11, name: "Short", price: 350, category: "Shorts", image: "/images/clothes/short4.jpg", description: "This is a short", discount: 300 },
+  { id: 12, name: "Short", price: 350, category: "Shorts", image: "/images/clothes/short5.jpg", description: "This is a short", discount: 300 },
+  { id: 13, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress1.jpg", description: "This is a dress", discount: 300 },
+  { id: 14, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress2.jpg", description: "This is a dress", discount: 300 },
+  { id: 15, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress3.jpg", description: "This is a dress", discount: 300 },
+  { id: 16, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress4.jpg", description: "This is a dress", discount: 300 },
+  { id: 17, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep1.jpg", description: "This is a nightwear", discount: 300 },
+  { id: 18, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep2.jpg", description: "This is a nightwear", discount: 300 },
+  { id: 19, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep3.jpg", description: "This is a nightwear", discount: 300 },
+  { id: 20, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep4.jpg", description: "This is a nightwear", discount: 300 },
+
 ];
 
 const ProductDetail = () => {
