@@ -31,7 +31,7 @@ const NavBar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center">
           <Link to="/" className="text-zinc-700 hover:text-blue-500 font-semibold">Home</Link>
-          <Link to="/shop" className="text-zinc-700 hover:text-blue-500 font-semibold">Shop</Link>
+          
           <Link to="/contact" className="text-zinc-700 hover:text-blue-500 font-semibold">Contact Me</Link>
 
           {/* Icons */}

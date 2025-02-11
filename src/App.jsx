@@ -5,6 +5,7 @@ import Cart from "./components/Cart";
 import Orders from "./components/Orders";
 import Checkout from "./components/Checkout";
 import NavBar from "./components/NavBar";
+import ContactMe from "./components/Contact";
 import "./style.css"; // Import the styles
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/contact" element={<ContactMe />} />
       </Routes>
     </Router>
   );
