@@ -5,6 +5,7 @@ import Cart from "./components/Cart";
 import Orders from "./components/Orders";
 import Checkout from "./components/Checkout";
 import NavBar from "./components/NavBar";
+import "./style.css"; // Import the styles
 
 function App() {
   return (
