@@ -5,22 +5,22 @@ import { FaHeart } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 
 const products = [
-  { id: 1, name: "Classic White Tee", price: 95, category: "Tees", image: "/images/clothes/white1.jpg", description: "A timeless white tee perfect for any occasion.", discount: 85 },
-  { id: 2, name: "Slim Fit White Tee", price: 100, category: "Tees", image: "/images/clothes/white2.jpg", description: "A sleek slim-fit tee for a modern look.", discount: 90 },
-  { id: 3, name: "V-Neck White Tee", price: 105, category: "Tees", image: "/images/clothes/white3.jpg", description: "A stylish V-neck tee made from soft cotton.", discount: 95 },
-  { id: 4, name: "Oversized White Tee", price: 150, category: "Tees", image: "/images/clothes/white4.jpg", description: "A comfortable oversized tee for a relaxed fit.", discount: 130 },
-  { id: 5, name: "Black Pullover Hoodie", price: 360, category: "Hoodies", image: "/images/clothes/hoodie1.jpg", description: "A cozy black hoodie with a warm fleece lining.", discount: 320 },
-  { id: 6, name: "Zip-Up Gray Hoodie", price: 370, category: "Hoodies", image: "/images/clothes/hoodie2.jpg", description: "A stylish gray hoodie with a zip-up front.", discount: 330 },
-  { id: 7, name: "Navy Blue Hoodie", price: 380, category: "Hoodies", image: "/images/clothes/hoodie3.jpg", description: "A soft and durable navy blue hoodie.", discount: 340 },
-  { id: 8, name: "Casual Black Shorts", price: 220, category: "Shorts", image: "/images/clothes/short1.jpg", description: "Comfortable black shorts for everyday wear.", discount: 190 },
-  { id: 9, name: "Denim Cutoff Shorts", price: 250, category: "Shorts", image: "/images/clothes/short2.jpg", description: "Trendy denim cutoff shorts for a stylish look.", discount: 200 },
-  { id: 10, name: "Athletic Running Shorts", price: 260, category: "Shorts", image: "/images/clothes/short3.jpg", description: "Lightweight running shorts for maximum comfort.", discount: 210 },
-  { id: 11, name: "Chino Shorts", price: 270, category: "Shorts", image: "/images/clothes/short4.jpg", description: "Classic chino shorts that pair well with any outfit.", discount: 230 },
-  { id: 12, name: "Cargo Utility Shorts", price: 290, category: "Shorts", image: "/images/clothes/short5.jpg", description: "Multi-pocket cargo shorts for a functional style.", discount: 250 },
-  { id: 13, name: "Floral Summer Dress", price: 450, category: "Dresses", image: "/images/clothes/dress1.jpg", description: "A beautiful floral dress perfect for summer.", discount: 400 },
-  { id: 14, name: "Elegant Evening Gown", price: 700, category: "Dresses", image: "/images/clothes/dress2.jpg", description: "A stunning evening gown for formal occasions.", discount: 650 },
-  { id: 15, name: "Casual Shirt Dress", price: 350, category: "Dresses", image: "/images/clothes/dress3.jpg", description: "A stylish yet casual shirt dress for daily wear.", discount: 320 },
-  { id: 16, name: "Vintage Polka Dot Dress", price: 500, category: "Dresses", image: "/images/clothes/dress4.jpg", description: "A classic polka dot dress with a vintage feel.", discount: 450 },
+  { id: 1, name: "Monkey Baloon", price: 95, category: "Tees", image: "/images/clothes/white1.jpg", description: "Just a Monkey chillin'mid-air", discount: 85 },
+  { id: 2, name: "Mauko Muna", price: 100, category: "Tees", image: "/images/clothes/white2.jpg", description: "Grafitti art white tee cut-out", discount: 90 },
+  { id: 3, name: "Joy Baggy", price: 105, category: "Tees", image: "/images/clothes/white3.jpg", description: "Oversized baggy fit white tee", discount: 95 },
+  { id: 4, name: "Art tee White", price: 150, category: "Tees", image: "/images/clothes/white4.jpg", description: "Simple white tee design", discount: 130 },
+  { id: 5, name: "Picturesque Hoodie", price: 360, category: "Hoodies", image: "/images/clothes/hoodie1.jpg", description: "Short sleeved blue hoodie ", discount: 320 },
+  { id: 6, name: "V-design Hoodie", price: 370, category: "Hoodies", image: "/images/clothes/hoodie2.jpg", description: "Short sleeved brown hoodie", discount: 330 },
+  { id: 7, name: "Maroon Hoodie", price: 380, category: "Hoodies", image: "/images/clothes/hoodie3.jpg", description: "House sillhoutte hoodie", discount: 340 },
+  { id: 8, name: "Astral Jorts Denim", price: 220, category: "Shorts", image: "/images/clothes/short1.jpg", description: "Grayish jorts with start design", discount: 190 },
+  { id: 9, name: "Short Faded Denim", price: 250, category: "Shorts", image: "/images/clothes/short2.jpg", description: "Classic Faded Denim Shorts ", discount: 300 },
+  { id: 10, name: "Short Dark Blue Jorts", price: 260, category: "Shorts", image: "/images/clothes/short3.jpg", description: "Denim Shorts in Dark Blue Shade", discount: 210 },
+  { id: 11, name: "Fashion Skort", price: 270, category: "Shorts", image: "/images/clothes/short4.jpg", description: "Available in Black and Pink", discount: 230 },
+  { id: 12, name: "Fashion Skort (new colors)", price: 290, category: "Shorts", image: "/images/clothes/short5.jpg", description: "Availale in Olive Green and Mustard", discount: 250 },
+  { id: 13, name: "Blue Floral Dress", price: 450, category: "Dresses", image: "/images/clothes/dress1.jpg", description: "Silk Dress with flower design", discount: 400 },
+  { id: 14, name: "Black Floral Dress", price: 700, category: "Dresses", image: "/images/clothes/dress2.jpg", description: "Elegeant Black floral dress V neck", discount: 650 },
+  { id: 15, name: "Casual Blouse", price: 350, category: "Dresses", image: "/images/clothes/dress3.jpg", description: "A blouse for casual occassions", discount: 320 },
+  { id: 16, name: "Sunflower Dress", price: 500, category: "Dresses", image: "/images/clothes/dress4.jpg", description: "A simple white dress with sunflowers", discount: 450 }
 ];
 
 const Products = () => {
