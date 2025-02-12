@@ -21,12 +21,6 @@ const products = [
   { id: 14, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress2.jpg", description: "This is a dress", discount: 300 },
   { id: 15, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress3.jpg", description: "This is a dress", discount: 300 },
   { id: 16, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress4.jpg", description: "This is a dress", discount: 300 }
-
-
-
-
-
-
 ];
 const Products = () => {
   const { addToCart } = useContext(CartContext);

@@ -6,6 +6,7 @@ import Orders from "./components/Orders";
 import Checkout from "./components/Checkout";
 import NavBar from "./components/NavBar";
 import ContactMe from "./components/Contact";
+import About from "./components/About";
 import "./style.css"; // Import the styles
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/contact" element={<ContactMe />} />
+        <Route path="/about" element={<About />} />
+
       </Routes>
     </Router>
   );

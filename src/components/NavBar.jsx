@@ -4,6 +4,9 @@ import { CartContext } from "../context/CartContext";
 import { TbShoppingBag } from "react-icons/tb";
 import { PiBellBold } from "react-icons/pi";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { HiHome } from "react-icons/hi";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaInfoCircle } from "react-icons/fa";
 
 const NavBar = () => {
   const { cart } = useContext(CartContext);
@@ -30,9 +33,15 @@ const NavBar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/" className="text-zinc-700 text-sm hover:text-yellow-500 font-semibold">Home</Link>
-          
-          <Link to="/contact" className="text-zinc-700 text-sm hover:text-yellow-500 font-semibold">Contact Me</Link>
+          <Link to="/" className="flex items-center space-x-1 text-zinc-700 text-sm hover:text-yellow-500 font-semibold">
+            <HiHome className="text-lg" /> <span>Home</span>
+          </Link>
+          <Link to="/about" className="flex items-center space-x-1 text-zinc-700 text-sm hover:text-yellow-500 font-semibold">
+            <FaInfoCircle className="text-lg" /> <span>About</span>
+          </Link>
+          <Link to="/contact" className="flex items-center space-x-1 text-zinc-700 text-sm hover:text-yellow-500 font-semibold">
+            <BsFillTelephoneFill className="text-base" /> <span>Contact Us</span>
+          </Link>
 
           {/* Icons */}
           <div className="relative flex space-x-4">
@@ -57,9 +66,15 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-white shadow-lg mt-2 space-y-4 py-4">
-          <Link to="/" className="text-zinc-700 hover:text-blue-500" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/shop" className="text-zinc-700 hover:text-blue-500" onClick={() => setIsOpen(false)}>Shop</Link>
-          <Link to="/contact" className="text-zinc-700 hover:text-blue-500" onClick={() => setIsOpen(false)}>Contact Me</Link>
+          <Link to="/" className="flex items-center space-x-2 text-zinc-700 hover:text-blue-500" onClick={() => setIsOpen(false)}>
+            <HiHome className="text-lg" /> <span>Home</span>
+          </Link>
+          <Link to="/about" className="flex items-center space-x-2 text-zinc-700 hover:text-blue-500" onClick={() => setIsOpen(false)}>
+            <FaInfoCircle className="text-lg" /> <span>About</span>
+          </Link>
+          <Link to="/contact" className="flex items-center space-x-2 text-zinc-700 hover:text-blue-500" onClick={() => setIsOpen(false)}>
+            <BsFillTelephoneFill className="text-base" /> <span>Contact Us</span>
+          </Link>
 
           <div className="relative flex space-x-4">
             <PiBellBold className="shadow-md text-zinc-700 p-2 rounded-full text-3xl cursor-pointer" />

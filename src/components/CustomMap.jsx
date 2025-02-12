@@ -20,7 +20,7 @@ const jawgTileUrl = "https://tile.jawg.io/jawg-lagoon/{z}/{x}/{y}{r}.png?access-
 const jawgAttribution =
   '';
 
-const position = [14.2459612,121.1206201]; // Manila, Philippines
+const position = [14.2431389,121.1131382]; // Manila, Philippines
 
 const CustomMap = () => {
   return (
