@@ -45,9 +45,9 @@ const NavBar = () => {
 
           {/* Icons */}
           <div className="relative flex space-x-4">
-            <PiBellBold className="shadow-md text-zinc-700 p-2 rounded-full text-4xl cursor-pointer" />
+            <PiBellBold className="shadow-md text-zinc-700 p-2 bg-yellow-400 rounded-full text-4xl cursor-pointer" />
             <Link to="/cart" className="relative">
-              <TbShoppingBag className="shadow-md p-2 rounded-full text-4xl text-zinc-700 cursor-pointer" />
+              <TbShoppingBag className="shadow-md p-2 rounded-full text-4xl text-zinc-700 cursor-pointer bg-yellow-400" />
               {cartItemCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                   {cartItemCount}
@@ -77,11 +77,11 @@ const NavBar = () => {
           </Link>
 
           <div className="relative flex space-x-4">
-            <PiBellBold className="shadow-md text-zinc-700 p-2 rounded-full text-3xl cursor-pointer" />
+            <PiBellBold className="shadow-md text-zinc-700 p-2 rounded-full text-3xl bg-yellow-400 cursor-pointer" />
             <Link to="/cart" className="relative" onClick={() => setIsOpen(false)}>
               <TbShoppingBag className="shadow-md p-2 rounded-full text-3xl text-zinc-700 cursor-pointer" />
               {cartItemCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs bg-yellow-400 font-bold px-2 py-1 rounded-full">
                   {cartItemCount}
                 </span>
               )}
