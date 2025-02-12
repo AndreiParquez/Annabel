@@ -40,7 +40,7 @@ const ProductDetail = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <Link to="/" className="text-blue-500 hover:underline mb-4 inline-block">
+      <Link to="/" className="text-yelllow-500 hover:underline mb-4 inline-block">
         <TiArrowBackOutline className="inline mr-2 text-2xl font-bold" /> Back to Products
       </Link>
       <div className="bg-white  rounded-lg p-2 items-center flex flex-col">
@@ -54,7 +54,7 @@ const ProductDetail = () => {
         
         <button 
           onClick={() => addToCart(product)} 
-          className="bg-blue-500 text-white w-full px-4 py-2 rounded hover:bg-blue-600 transition duration-300 flex items-center justify-center"
+          className="bg-yellow-800 text-white w-full px-4 py-2 font-bold rounded hover:bg-yellow-600 transition duration-300 flex items-center justify-center"
         >
           <BiSolidCartAlt className="mr-2 text-2xl font-bold" /> Add to Cart
         </button>

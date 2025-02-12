@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { FaHeart } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
 
 const products = [
   { id: 1, name: "White Tee", price: 90, category: "Tees", image: "/images/clothes/white1.jpg", description: "This is a white tee", discount: 80 },
@@ -19,11 +20,7 @@ const products = [
   { id: 13, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress1.jpg", description: "This is a dress", discount: 300 },
   { id: 14, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress2.jpg", description: "This is a dress", discount: 300 },
   { id: 15, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress3.jpg", description: "This is a dress", discount: 300 },
-  { id: 16, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress4.jpg", description: "This is a dress", discount: 300 },
-  { id: 17, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep1.jpg", description: "This is a nightwear", discount: 300 },
-  { id: 18, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep2.jpg", description: "This is a nightwear", discount: 300 },
-  { id: 19, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep3.jpg", description: "This is a nightwear", discount: 300 },
-  { id: 20, name: "Nightwear", price: 350, category: "Nightwear", image: "/images/clothes/sleep4.jpg", description: "This is a nightwear", discount: 300 },
+  { id: 16, name: "Dress", price: 350, category: "Dresses", image: "/images/clothes/dress4.jpg", description: "This is a dress", discount: 300 }
 
 
 
@@ -31,11 +28,11 @@ const products = [
 
 
 ];
-
 const Products = () => {
   const { addToCart } = useContext(CartContext);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [likedProducts, setLikedProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const categories = ["All", ...new Set(products.map(product => product.category))];
 
@@ -47,6 +44,12 @@ const Products = () => {
     );
   };
 
+  // Filtered products based on category and search
+  const filteredProducts = products.filter(product => 
+    (selectedCategory === "All" || product.category === selectedCategory) &&
+    product.name.toLowerCase().includes(searchQuery.toLowerCase()) // Case-insensitive search
+  );
+
   return (
     <div className="p-4">
       {/* Hero Section */}
@@ -56,13 +59,25 @@ const Products = () => {
             Welcome to <span className="text-yellow-800">Annabell’s Closet</span>, Your Online <span className="text-yellow-500">Ukay-Ukay</span> Haven!
           </h1>
           <p className="text-gray-700 mb-4 font-semibold">
-            Love affordable fashion? Annabell’s Closet brings you the best ukay-ukay finds—vintage, trendy, and budget-friendly! Shop preloved styles without overspending.
+            Love affordable fashion? Annabell’s Closet brings you the best ukay-ukay finds vintage, trendy, and budget-friendly!
           </p>
         </div>
         <img src="/images/brand.png" alt="Banner" className="w-full md:w-1/2 rounded-lg" />
       </div>
 
-      {/* Category Filter Tabs (Scrollable on Mobile) */}
+      {/* Search Bar */}
+      <div className="relative mb-8  flex items-center justify-center mx-auto">
+        <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-700 font-extrabold text-lg" />
+        <input
+          type="text"
+          placeholder="Search for products..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full outline-none ring-2 ring-yellow-500 shadow-md"
+        />
+      </div>
+
+      {/* Category Filter Tabs */}
       <div className="overflow-x-auto flex space-x-4 mb-4 pb-2 scrollbar-hide">
         {categories.map((category, index) => (
           <button
@@ -77,9 +92,8 @@ const Products = () => {
 
       {/* Products Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products
-          .filter(product => selectedCategory === "All" || product.category === selectedCategory)
-          .map((product) => (
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
             <div key={product.id} className="relative bg-zinc-100 rounded-lg p-2 cursor-pointer hover:shadow-lg transition-shadow duration-300">
               <Link to={`/product/${product.id}`} className="no-underline text-inherit">
                 <div>
@@ -101,11 +115,12 @@ const Products = () => {
                 </div>
               </Link>
             </div>
-        ))}
+          ))
+        ) : (
+          <p className="text-center text-gray-600 col-span-full">No matching products found.</p>
+        )}
       </div>
-      
     </div>
-
   );
 };
 

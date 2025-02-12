@@ -45,7 +45,7 @@ const Checkout = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+    <div className="flex justify-center items-center  bg-gray-100 p-4">
       {loading ? (
         <Loader />
       ) : (
@@ -76,12 +76,12 @@ const Checkout = () => {
 
             {error && <p className="text-red-500 text-sm">{error}</p>}
 
-            <h3 className="text-lg font-semibold">Total: <span className="text-blue-600">₱{total}</span></h3>
+            <h3 className="text-lg font-semibold text-center">Total: <span className="text-green-600">₱{total}</span></h3>
 
             <button
               onClick={handleCheckout}
               disabled={loading}
-              className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+              className="w-full bg-yellow-800 text-white py-2 font-bold rounded-lg hover:bg-yellow-700 disabled:opacity-50"
             >
               {loading ? "Processing..." : "Confirm Order"}
             </button>
@@ -92,7 +92,7 @@ const Checkout = () => {
       {/* Success Modal */}
       {success && (
         <div className="fixed inset-0 flex items-center justify-center bg-white ">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+          <div className="bg-white p-6 rounded-lg text-center">
             <h3 className="text-2xl font-semibold text-green-600">Order Placed!</h3>
             <p className="text-gray-700 mt-2">Thank you for your order. We will process it soon.</p>
             <button

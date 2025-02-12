@@ -4,8 +4,8 @@ import CustomMap from "../components/CustomMap";
 const Contact = () => {
   return (
     <div className="flex flex-col items-center justify-center p-6">
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">📞 Contact Us</h1>
-      <p className="text-gray-600 text-lg mb-4">Feel free to reach out or visit us at our store!</p>
+      <h1 className="text-xl font-bold text-gray-800 mb-4">📞 Contact Us</h1>
+      <p className="text-gray-600  mb-4">Feel free to reach out or visit us at our store!</p>
 
       {/* Facebook Link */}
       <a
