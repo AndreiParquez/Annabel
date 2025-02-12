@@ -9,6 +9,7 @@ const Checkout = () => {
   const { cart, clearCart } = useContext(CartContext);
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState("gcash");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -17,8 +18,8 @@ const Checkout = () => {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const handleCheckout = async () => {
-    if (!name || !address) {
-      setError("Please enter your name and address.");
+    if (!name || !address || !paymentMethod) {
+      setError("Please enter your name, address, and select a payment method.");
       return;
     }
 
@@ -29,6 +30,7 @@ const Checkout = () => {
       await addDoc(collection(db, "orders"), {
         customerName: name,
         customerAddress: address,
+        paymentMethod: paymentMethod,
         items: cart,
         total: total,
         timestamp: new Date(),
@@ -74,9 +76,24 @@ const Checkout = () => {
               />
             </div>
 
+            <div>
+              <label className="block text-gray-700 font-medium">Payment Method</label>
+              <select
+                value={paymentMethod}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300"
+              >
+                <option value="gcash">GCash</option>
+                <option value="card">Credit/Debit Card</option>
+                <option value="cod">Cash on Delivery (COD)</option>
+              </select>
+            </div>
+
             {error && <p className="text-red-500 text-sm">{error}</p>}
 
-            <h3 className="text-lg font-semibold text-center">Total: <span className="text-green-600">₱{total}</span></h3>
+            <h3 className="text-lg font-semibold text-center">
+              Total: <span className="text-green-600">₱{total}</span>
+            </h3>
 
             <button
               onClick={handleCheckout}
@@ -89,9 +106,8 @@ const Checkout = () => {
         </div>
       )}
 
-      {/* Success Modal */}
       {success && (
-        <div className="fixed inset-0 flex items-center justify-center bg-white ">
+        <div className="fixed inset-0 flex items-center justify-center bg-white">
           <div className="bg-white p-6 rounded-lg text-center">
             <h3 className="text-2xl font-semibold text-green-600">Order Placed!</h3>
             <p className="text-gray-700 mt-2">Thank you for your order. We will process it soon.</p>
